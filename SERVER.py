@@ -21,7 +21,8 @@ def MSGS():
 			S.listen(5)
 			while(True):
 				cliente, addr = S.accept()
-				print(cliente.recv(1024))
+				var = cliente.recv(1024).decode("UTF-8")
+				print(var)
 				cliente.close()
 
 	sendMsg(input("ENVIE A MSG> "))
